@@ -10,5 +10,6 @@ Module::Build
          requires    => {
              'Template' => 0,
          },
+	 create_makefile_pl => 'traditional',
        )
   ->create_build_script;
