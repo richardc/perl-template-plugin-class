@@ -50,8 +50,8 @@ applications, where you may do somthing like this:
 
 =head1 CAVEATS
 
-You won't be able to call C<AUTOLOAD> or C<DESTROY> methods on the
-remote class.  This shouldn't be a huge hardship.
+You won't be able to directly call C<AUTOLOAD> or C<DESTROY> methods
+on the remote class.  This shouldn't be a huge hardship.
 
 =head1 BUGS
 
