@@ -11,6 +11,7 @@ is( $tt->error, undef, "no error" );
 
 is( $out, Foo->bar, "method was called" );
 
+BEGIN { $INC{'Foo.pm'} = 1 }
 package Foo;
 sub bar {
     "I am returning bar";
