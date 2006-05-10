@@ -2,7 +2,7 @@ use strict;
 package Template::Plugin::Class;
 use base 'Template::Plugin';
 use vars qw( $VERSION );
-$VERSION = '0.12';
+$VERSION = '0.13';
 
 sub new {
     my $class = shift;
@@ -13,7 +13,8 @@ sub new {
     eval "require $arg";
     # Only ignore "Can't locate" errors from our eval require.
     # Other fatal errors (syntax etc) must be reported.
-    die if $@ && $@ !~ /^Can't locate .*? at \(eval /;
+    (my $filename = $arg) =~ s!::!/!g;
+    die if $@ && $@ !~ /Can't locate \Q$filename\E\.pm/;
     no strict 'refs';
     unless (%{"$arg\::"}) {
         require Carp;
@@ -68,8 +69,7 @@ on the remote class.  This shouldn't be a huge hardship.
 =head1 BUGS
 
 Apart from the mentioned caveat, none currently known.  If you find
-any please make use of L<http://rt.cpan.org> by mailing your report to
-bug-Template-Plugin-Class@rt.cpan.org, or contact me directly.
+any please contact the author.
 
 =head1 AUTHOR
 
@@ -77,7 +77,7 @@ Richard Clamp <richardc@unixbeard.net>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2003 Richard Clamp.  All Rights Reserved.
+Copyright (C) 2003, 2004, 2006 Richard Clamp.  All Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
