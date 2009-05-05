@@ -1,3 +1,6 @@
+
+        Removed a bogus testcase which fails on newer versions of TTD
+
 0.13	Wednesday 10th May, 2006
 	Make it work correctly when diagnostics.pm is in use.
 	http://rt.cpan.org/Ticket/Display.html?id=11538
