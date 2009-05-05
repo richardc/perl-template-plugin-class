@@ -2,7 +2,7 @@ use strict;
 package Template::Plugin::Class;
 use base 'Template::Plugin';
 use vars qw( $VERSION );
-$VERSION = '0.13';
+$VERSION = '0.14';
 
 sub new {
     my $class = shift;
@@ -77,7 +77,7 @@ Richard Clamp <richardc@unixbeard.net>
 
 =head1 COPYRIGHT
 
-Copyright (C) 2003, 2004, 2006 Richard Clamp.  All Rights Reserved.
+Copyright (C) 2003, 2004, 2006, 2009 Richard Clamp.  All Rights Reserved.
 
 This module is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.
