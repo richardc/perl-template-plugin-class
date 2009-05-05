@@ -1,7 +1,5 @@
 Changes
 Makefile.PL
-META.yml
-README
 MANIFEST
 lib/Template/Plugin/Class.pm
 t/class.t
